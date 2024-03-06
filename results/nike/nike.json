@@ -1,0 +1,31 @@
+{
+    "Domain": "www.nike.com",
+    "AsnsFound": [
+        {
+            "ID": "as16509",
+            "Name": "amazon.com, inc.",
+            "IPs": [
+                {
+                    "IP": "52.25.172.81",
+                    "HashSSLVerified": false
+                }
+            ]
+        },
+        {
+            "ID": "as14618",
+            "Name": "amazon.com, inc.",
+            "IPs": [
+                {
+                    "IP": "54.173.172.127",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "prod.ops.smartbear.io",
+                        "Amazon RSA 2048 M02",
+                        "Amazon Root CA 1",
+                        "Starfield Services Root Certificate Authority - G2"
+                    ]
+                }
+            ]
+        }
+    ]
+}

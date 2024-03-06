@@ -1,0 +1,2 @@
+*               hard    nofile          1048576
+*               soft    nofile          1048576

@@ -1,0 +1,702 @@
+{
+    "Domain": "www.realtor.ca",
+    "AsnsFound": [
+        {
+            "ID": "as14061",
+            "Name": "digitalocean, llc",
+            "IPs": [
+                {
+                    "IP": "192.34.56.129",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "allrize.com",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "138.68.36.143",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "174.138.0.162",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "uisp.com",
+                        "Sectigo RSA Domain Validation Secure Server CA",
+                        "USERTrust RSA Certification Authority"
+                    ]
+                },
+                {
+                    "IP": "67.207.68.164",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "4cexecutive.com",
+                        "R3"
+                    ]
+                },
+                {
+                    "IP": "142.93.2.167",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "sollist.com",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "178.62.2.182",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.sellcubed.net",
+                        "*.sellcubed.net",
+                        "Let's Encrypt Authority X3"
+                    ]
+                },
+                {
+                    "IP": "147.182.130.213",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "www.example.com"
+                    ]
+                },
+                {
+                    "IP": "67.205.130.218",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "papajoesmarket.com",
+                        "Sectigo RSA Domain Validation Secure Server CA",
+                        "USERTrust RSA Certification Authority"
+                    ]
+                },
+                {
+                    "IP": "146.190.186.224",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "Cloudflare"
+                    ]
+                },
+                {
+                    "IP": "159.89.2.233",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.smartarchivo.de",
+                        "Sectigo RSA Domain Validation Secure Server CA",
+                        "USERTrust RSA Certification Authority"
+                    ]
+                },
+                {
+                    "IP": "192.241.130.243",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "www.example.com"
+                    ]
+                },
+                {
+                    "IP": "104.248.3.10",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "mu2.advisorevolved.com",
+                        "ZeroSSL ECC Domain Secure Site CA",
+                        "USERTrust ECC Certification Authority"
+                    ]
+                },
+                {
+                    "IP": "143.244.220.17",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "nervous-tesla.167-71-170-203.plesk.page",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "104.131.3.28",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "uisp.com",
+                        "Sectigo RSA Domain Validation Secure Server CA",
+                        "USERTrust RSA Certification Authority"
+                    ]
+                },
+                {
+                    "IP": "198.199.67.33",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "146.190.3.46",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "lemmy.zxcvn.xyz",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "138.68.3.84",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "dev.easylitcrm.com",
+                        "Let's Encrypt Authority X3"
+                    ]
+                },
+                {
+                    "IP": "208.68.39.236",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "24.144.69.51",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "radio.megadj.com.br",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "159.203.6.44",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.drywallmedic.com",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "188.166.18.139",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "yuvod-prueba.yuvod.net",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "167.99.19.209",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "visualizer-editor.production.geniem.io",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "209.97.149.3",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "unmsapp.com",
+                        "Sectigo RSA Domain Validation Secure Server CA",
+                        "USERTrust RSA Certification Authority"
+                    ]
+                },
+                {
+                    "IP": "137.184.21.41",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "138.197.24.238",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "uisp.com",
+                        "Sectigo RSA Domain Validation Secure Server CA",
+                        "USERTrust RSA Certification Authority"
+                    ]
+                },
+                {
+                    "IP": "159.89.93.212",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "uta.avl.cl",
+                        "R3"
+                    ]
+                },
+                {
+                    "IP": "165.22.35.234",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "webdevsimplified.com",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "165.227.36.10",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "stage.bitcoinwell.com",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "134.209.36.20",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "128.199.36.147",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.dafater.biz",
+                        "Go Daddy Secure Certificate Authority - G2",
+                        "Go Daddy Root Certificate Authority - G2",
+                        ""
+                    ]
+                },
+                {
+                    "IP": "134.122.45.19",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "unmsapp.com",
+                        "Sectigo RSA Domain Validation Secure Server CA",
+                        "USERTrust RSA Certification Authority"
+                    ]
+                },
+                {
+                    "IP": "167.71.46.235",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "blog.everydaymoney.app",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "45.55.47.7",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "159.65.47.37",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.cloudwaysapps.com",
+                        "Sectigo RSA Domain Validation Secure Server CA",
+                        "USERTrust RSA Certification Authority",
+                        "AAA Certificate Services"
+                    ]
+                },
+                {
+                    "IP": "143.198.48.6",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "moreworld.site",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "143.244.176.77",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.notifync.com",
+                        "Go Daddy Secure Certificate Authority - G2",
+                        "Go Daddy Root Certificate Authority - G2",
+                        ""
+                    ]
+                },
+                {
+                    "IP": "68.183.48.112",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "bookmap.us.com",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "24.199.115.14",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "164.92.123.158",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "uisp.com",
+                        "Sectigo RSA Domain Validation Secure Server CA",
+                        "USERTrust RSA Certification Authority"
+                    ]
+                },
+                {
+                    "IP": "157.245.65.247",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "ehealth-prod.graphileon.com",
+                        "R3"
+                    ]
+                },
+                {
+                    "IP": "64.227.66.94",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "209.38.232.30",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "TRAEFIK DEFAULT CERT"
+                    ]
+                },
+                {
+                    "IP": "143.110.214.147",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "api.crm.v2.thecanadianhome.com",
+                        "R3"
+                    ]
+                },
+                {
+                    "IP": "159.223.113.32",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "TRAEFIK DEFAULT CERT"
+                    ]
+                },
+                {
+                    "IP": "161.35.115.18",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "rys.ecofel.app",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "104.236.117.223",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "hardinhomes.com",
+                        "R3"
+                    ]
+                },
+                {
+                    "IP": "46.101.118.50",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "futurelearning.se",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "164.90.246.74",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "files.inger.app",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                },
+                {
+                    "IP": "165.232.158.7",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "157.230.126.43",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "academy-notifications.startupmasters.eu",
+                        "R3"
+                    ]
+                },
+                {
+                    "IP": "162.243.141.85",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "clearwater-properties.localdomain"
+                    ]
+                },
+                {
+                    "IP": "139.59.141.162",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.aivencloud.com",
+                        "R3"
+                    ]
+                },
+                {
+                    "IP": "178.128.147.183",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "capscooks.com"
+                    ]
+                },
+                {
+                    "IP": "167.172.150.76",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "Plesk"
+                    ]
+                },
+                {
+                    "IP": "107.170.150.86",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "206.189.160.189",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "intranet.vayusphere.com",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": "as812",
+            "Name": "rogers communications canada inc.",
+            "IPs": [
+                {
+                    "IP": "23.76.196.145",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.test.edgekey.net",
+                        "DigiCert TLS RSA SHA256 2020 CA1"
+                    ]
+                },
+                {
+                    "IP": "104.71.244.165",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.coupangeats.com",
+                        "Sectigo RSA Organization Validation Secure Server CA",
+                        "USERTrust RSA Certification Authority",
+                        "AAA Certificate Services"
+                    ]
+                },
+                {
+                    "IP": "184.26.194.216",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "www.nipocenter.com.br",
+                        "DigiCert SHA2 Extended Validation Server CA"
+                    ]
+                },
+                {
+                    "IP": "72.142.154.219",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "184.25.66.227",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "24.114.4.1",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "UbiquitiRouterUI"
+                    ]
+                },
+                {
+                    "IP": "72.136.130.8",
+                    "HashSSLVerified": false
+                }
+            ]
+        },
+        {
+            "ID": "as8075",
+            "Name": "microsoft corporation",
+            "IPs": [
+                {
+                    "IP": "168.61.0.200",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "my.godesana.com",
+                        "Sectigo RSA Domain Validation Secure Server CA"
+                    ]
+                },
+                {
+                    "IP": "213.199.130.191",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "20.150.2.228",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.blob.core.windows.net",
+                        "Microsoft RSA TLS CA 01"
+                    ]
+                },
+                {
+                    "IP": "137.135.24.220",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "151.206.36.13",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "ztna1p-ring.msedge.net",
+                        "Microsoft Azure TLS Issuing CA 05",
+                        "DigiCert Global Root G2"
+                    ]
+                },
+                {
+                    "IP": "137.116.51.33",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "www.townofsurfsidefl.gov",
+                        "DigiCert Global G2 TLS RSA SHA256 2020 CA1"
+                    ]
+                },
+                {
+                    "IP": "51.124.51.221",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "98.64.66.54",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "20.0.73.75",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.callrecorder.skype.com",
+                        "Microsoft Azure RSA TLS Issuing CA 08"
+                    ]
+                },
+                {
+                    "IP": "138.91.76.244",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.stackify.com",
+                        "Go Daddy Secure Certificate Authority - G2",
+                        "Go Daddy Root Certificate Authority - G2"
+                    ]
+                },
+                {
+                    "IP": "13.64.128.55",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "20.160.141.113",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.cloud-horoquartz.fr",
+                        "AlphaSSL CA - SHA256 - G4"
+                    ]
+                },
+                {
+                    "IP": "52.224.142.129",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "cloud.ppd.com",
+                        "DigiCert Global G2 TLS RSA SHA256 2020 CA1",
+                        "DigiCert Global Root G2"
+                    ]
+                },
+                {
+                    "IP": "52.114.92.158",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "chatsvcagg.teams.microsoft.com",
+                        "Microsoft Azure TLS Issuing CA 01"
+                    ]
+                },
+                {
+                    "IP": "23.103.224.155",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "outlook.com",
+                        "DigiCert Cloud Services CA-1"
+                    ]
+                },
+                {
+                    "IP": "157.55.179.210",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "51.140.188.232",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.callrecorder.skype.com",
+                        "Microsoft Azure RSA TLS Issuing CA 08"
+                    ]
+                },
+                {
+                    "IP": "20.186.162.94",
+                    "HashSSLVerified": true,
+                    "CommonSSLCNNames": [
+                        "*.azurewebsites.net",
+                        "Microsoft Azure TLS Issuing CA 01"
+                    ]
+                },
+                {
+                    "IP": "20.186.162.46",
+                    "HashSSLVerified": true,
+                    "CommonSSLCNNames": [
+                        "*.azurewebsites.net",
+                        "Microsoft Azure TLS Issuing CA 01"
+                    ]
+                },
+                {
+                    "IP": "40.112.165.30",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "rm-cloud-uat.app.championenergyservices.com",
+                        "Go Daddy Secure Certificate Authority - G2",
+                        "Go Daddy Root Certificate Authority - G2"
+                    ]
+                },
+                {
+                    "IP": "40.76.165.74",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "test.apim.net"
+                    ]
+                },
+                {
+                    "IP": "20.50.38.65",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "funds.dev.swisslife-am.net",
+                        "ISRG Root X1",
+                        "R3"
+                    ]
+                },
+                {
+                    "IP": "52.168.162.232",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.pogcloud.com",
+                        "Go Daddy Secure Certificate Authority - G2"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": "as8069",
+            "Name": "microsoft corporation",
+            "IPs": [
+                {
+                    "IP": "20.47.2.189",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.file.core.windows.net",
+                        "Microsoft RSA TLS CA 01"
+                    ]
+                },
+                {
+                    "IP": "20.157.142.33",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.dfs.core.windows.net",
+                        "Microsoft Azure TLS Issuing CA 05"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": "as3598",
+            "Name": "microsoft corporation",
+            "IPs": [
+                {
+                    "IP": "194.69.100.250",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "london.msftvpn.ras.microsoft.com",
+                        "Microsoft Azure RSA TLS Issuing CA 07",
+                        "DigiCert Global Root G2"
+                    ]
+                }
+            ]
+        }
+    ]
+}

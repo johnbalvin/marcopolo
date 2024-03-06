@@ -1,0 +1,3 @@
+results/*/body
+*.log
+*.pem

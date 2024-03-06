@@ -1,0 +1,139 @@
+{
+    "Domain": "www.walmart.com",
+    "AsnsFound": [
+        {
+            "ID": "as22773",
+            "Name": "cox communications inc.",
+            "IPs": [
+                {
+                    "IP": "68.106.122.6",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "a248.e.akamai.net",
+                        "DigiCert TLS RSA SHA256 2020 CA1"
+                    ]
+                },
+                {
+                    "IP": "68.106.122.5",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "a248.e.akamai.net",
+                        "DigiCert TLS RSA SHA256 2020 CA1"
+                    ]
+                },
+                {
+                    "IP": "68.106.122.8",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "a248.e.akamai.net",
+                        "DigiCert TLS RSA SHA256 2020 CA1"
+                    ]
+                },
+                {
+                    "IP": "68.106.122.7",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "a248.e.akamai.net",
+                        "DigiCert TLS RSA SHA256 2020 CA1"
+                    ]
+                },
+                {
+                    "IP": "98.173.239.17",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "Test Server Cert"
+                    ]
+                },
+                {
+                    "IP": "184.179.114.124",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "tcds05.thecomputerdoctors.biz",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": "as19994",
+            "Name": "rackspace hosting",
+            "IPs": [
+                {
+                    "IP": "166.78.121.19",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "client.recommercegroupinc.com",
+                        "DigiCert Global G2 TLS RSA SHA256 2020 CA1"
+                    ]
+                },
+                {
+                    "IP": "192.237.188.29",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.guggenheim.org",
+                        "Gandi Standard SSL CA 2"
+                    ]
+                },
+                {
+                    "IP": "162.209.61.238",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "blog.simplecanvasprints.com",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": "as7018",
+            "Name": "at&t services, inc.",
+            "IPs": [
+                {
+                    "IP": "12.160.9.34",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "192.168.36.6"
+                    ]
+                },
+                {
+                    "IP": "12.41.112.72",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "*.indoff.com",
+                        "DigiCert Global G2 TLS RSA SHA256 2020 CA1"
+                    ]
+                },
+                {
+                    "IP": "12.176.85.214",
+                    "HashSSLVerified": false
+                },
+                {
+                    "IP": "12.150.75.156",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "mail.thebronson.com",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": "as15395",
+            "Name": "rackspace ltd.",
+            "IPs": [
+                {
+                    "IP": "134.213.58.156",
+                    "HashSSLVerified": false,
+                    "CommonSSLCNNames": [
+                        "d9.pid.gdc.pleasetest.co.uk",
+                        "R3",
+                        "ISRG Root X1"
+                    ]
+                }
+            ]
+        }
+    ]
+}

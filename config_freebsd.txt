@@ -1,0 +1,6 @@
+net.inet.tcp.msl=2000           
+net.inet.tcp.finwait2_timeout=15000
+net.inet.ip.portrange.first=1024
+net.inet.ip.portrange.last=65535
+kern.maxfiles=2048000
+kern.maxfilesperproc=1024000

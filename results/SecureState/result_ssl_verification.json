@@ -1,0 +1,20 @@
+{
+    "Domain": "secure.state.co.nz",
+    "AsnsFound": [
+        {
+            "ID": "as134692",
+            "Name": "iag new zealand",
+            "IPs": [
+                {
+                    "IP": "202.50.11.200",
+                    "HashSSLVerified": true,
+                    "CommonSSLCNNames": [
+                        "secure.state.co.nz",
+                        "Thawte TLS RSA CA G1",
+                        "DigiCert Global Root G2"
+                    ]
+                }
+            ]
+        }
+    ]
+}
