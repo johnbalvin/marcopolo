@@ -26,7 +26,7 @@ Use it as it is, then wait for completition
     go run .
 ```
 ## setup the website target
-```json
+```go
    Input{
       URL:        utils.ParseURL("https://secure.state.co.nz/car"),
       Keyworkds:  []string{"State Insurance", "secure.state.co.nz/car/favicon.ico"},
