@@ -17,7 +17,7 @@ To run the code you will need to Golang: https://go.dev/dl/
 
 ## Download and run the project: 
 ```bash
-    git clone [url]
+    git clone https://github.com/johnbalvin/marcopolo
 ```
 Use it as it is, then wait for completition
 
