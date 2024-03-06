@@ -3,12 +3,13 @@
 Marco polo will help you find the real IP behind any server, most common use is you want to get the real IP for servers behind any WAF, like cloudflare, akamai or imperva, these websites sometimes rely on them 100% and they forget their IP still public and direct attacks still happen and they misconfigured the serve
 
 ## This is how the design looks for websites behind a WAF:
-![alt text](<images/disney 1.png>)
+![disney with waf](<images/disney 1.png>)
 
 
 
 So with this project you will be able to get the IP from real server, X.X.X.X
-[text](<images/disney 2png>)
+
+![disney without waf](<images/disney 2png>)
 
 
 
