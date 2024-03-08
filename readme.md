@@ -30,7 +30,6 @@ Use it as it is, then wait for completition
    Input{
       URL:        utils.ParseURL("https://secure.state.co.nz/car"),
       Keyworkds:  []string{"State Insurance", "secure.state.co.nz/car/favicon.ico"},
-      TCPTimeout: time.Millisecond * 150,
       BufferSize: 2048,
       Asn: asn.Asn{
          PrioritiesNames: []string{"IAG New Zealand"},
