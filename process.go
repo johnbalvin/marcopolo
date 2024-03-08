@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func (input *Input) SearchIPsWithKeywords(stopOnAsnIPFound bool, ipsRanges asn.IPRangeWrapper, progressEach time.Duration, threadsNumber int, chanProgress chan Progress, chanIPsFound chan IPFoundMeta) []IPFoundMeta {
+func (input *Input) SearchIPsWithKeywords(stopOnAsnIPFound bool, ipsRanges asn.IPRangeWrapper, threadsNumber int, tcpTimeout, progressEach time.Duration, chanProgress chan Progress, chanIPsFound chan IPFoundMeta) []IPFoundMeta {
 	input.setInputs()
 	bufferSize := input.BufferSize
 	if bufferSize == 0 {
@@ -55,7 +55,7 @@ func (input *Input) SearchIPsWithKeywords(stopOnAsnIPFound bool, ipsRanges asn.I
 	for range threadsNumber {
 		go func() {
 			for ipMetadata := range chanIP {
-				polo, whichStep, buffer, err := input.Marco(ipMetadata.IP.IP)
+				polo, whichStep, buffer, err := input.Marco(ipMetadata.IP.IP, tcpTimeout)
 				mutex.Lock()
 				progress++
 				if whichStep == 1 {
@@ -140,7 +140,7 @@ func (input *Input) SearchIPsWithKeywords(stopOnAsnIPFound bool, ipsRanges asn.I
 	return IPsFound
 }
 
-func (input *Input) SearchIPsWithSSLMatches(stopOnIPFound bool, ipsRanges asn.IPRangeWrapper, progressEach time.Duration, threadsNumber int, chanProgress chan Progress, chanIPsFound chan IPFoundMeta) []IPFoundMeta {
+func (input *Input) SearchIPsWithSSLMatches(stopOnSSlFound bool, ipsRanges asn.IPRangeWrapper, threadsNumber int, sslTimeout, progressEach time.Duration, chanProgress chan Progress, chanIPsFound chan IPFoundMeta) []IPFoundMeta {
 	var finishedEverything bool
 	var progress float64
 	var countFirst, countSecond uint32
@@ -183,7 +183,7 @@ func (input *Input) SearchIPsWithSSLMatches(stopOnIPFound bool, ipsRanges asn.IP
 					wg.Done()
 					continue
 				}
-				err := ssl.VerifyHost(ipMetadata.IP.IP, input.URL.Host)
+				err := ssl.VerifyHost(ipMetadata.IP.IP, input.URL.Host, sslTimeout)
 				mutex.Lock()
 				progress++
 				mutex.Unlock()
@@ -193,7 +193,7 @@ func (input *Input) SearchIPsWithSSLMatches(stopOnIPFound bool, ipsRanges asn.IP
 					continue
 				}
 				mutex.Lock()
-				if stopOnIPFound {
+				if stopOnSSlFound {
 					finishedEverything = true
 				}
 				IPsFound = append(IPsFound, ipMetadata)

@@ -4,9 +4,10 @@ import (
 	"log"
 	"marcopolo/ssl"
 	"sync"
+	"time"
 )
 
-func (finalResult *Result) SetSSL(host string) {
+func (finalResult *Result) SetSSL(host string, sslTimeout time.Duration) {
 	var wg sync.WaitGroup
 	var progress int
 	var size int
@@ -19,7 +20,7 @@ func (finalResult *Result) SetSSL(host string) {
 				i := indexes[0]
 				j := indexes[1]
 				ipMeta := finalResult.AsnsFound[i].IPs[j]
-				commonNames, sslHashHost, _ := ssl.VerifyAll(ipMeta.IP, host)
+				commonNames, sslHashHost, _ := ssl.VerifyAll(ipMeta.IP, host, sslTimeout)
 				finalResult.AsnsFound[i].IPs[j].CommonSSLCNNames = commonNames
 				finalResult.AsnsFound[i].IPs[j].HashSSLVerified = &sslHashHost
 				mutex.Lock()

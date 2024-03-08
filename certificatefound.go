@@ -9,11 +9,10 @@ import (
 	"time"
 )
 
-func (input Input) stopOnIPCertificateFound(asnPath string) { //if you want to stop once you find the IP having the ssl certificate
+func (input Input) SearchBySSLCertificatesOnly(stopOnSSlFound bool, threadsNumber int, sslTimeout time.Duration, asnPath string) { //if you want to stop once you find the IP having the ssl certificate
 	for _, priority := range input.Asn.PrioritiesNames {
 		fmt.Printf("Priority name: *%s*\n", priority)
 	}
-	threadsNumber := 500
 	checkProgressEach := time.Minute
 	chanProgress := make(chan Progress)
 	chanIPsFound := make(chan IPFoundMeta)
@@ -36,7 +35,7 @@ func (input Input) stopOnIPCertificateFound(asnPath string) { //if you want to s
 		}
 	}()
 	//
-	ipsFound, err := input.GetIPsWithSSLFromPriorities(true, threadsNumber, checkProgressEach, chanProgress, chanIPsFound, asnPath)
+	ipsFound, err := input.GetIPsWithSSLFromPriorities(stopOnSSlFound, threadsNumber, sslTimeout, checkProgressEach, chanProgress, chanIPsFound, asnPath)
 	if err != nil {
 		log.Fatalf("failed running the code: %s", err)
 	}
@@ -63,7 +62,7 @@ func (input Input) stopOnIPCertificateFound(asnPath string) { //if you want to s
 	f, _ := os.Create("./results/result_ip_ssl_verification_ips.json")
 	json.NewEncoder(f).Encode(finalResult)
 	//if you want to verify the ssl
-	finalResult.SetSSL(input.URL.Host)
+	finalResult.SetSSL(input.URL.Host, sslTimeout)
 	//---------------------
 	f2, _ := os.Create("./results/result_ip_ssl_verification_all_data.json")
 	json.NewEncoder(f2).Encode(finalResult)

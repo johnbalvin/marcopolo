@@ -3,7 +3,6 @@ package main
 import (
 	"marcopolo/asn"
 	"net/url"
-	"time"
 )
 
 type Result struct {
@@ -26,7 +25,6 @@ type Input struct {
 	keyworkds  [][]byte
 	Asn        asn.Asn
 	BufferSize int
-	TCPTimeout time.Duration
 	request    []byte
 }
 

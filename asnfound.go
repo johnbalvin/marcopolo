@@ -10,8 +10,7 @@ import (
 	"time"
 )
 
-// 0969822766
-func (input Input) stopOnEachAsnFound(threadsNumber int, asnPath string) {
+func (input Input) SearchByKeywords(stopOnASNFound bool, threadsNumber int, tcpTimeout, sslTimeout time.Duration, asnPath string) {
 	for _, priority := range input.Asn.PrioritiesNames {
 		fmt.Printf("Priority name: *%s*\n", priority)
 	}
@@ -43,7 +42,7 @@ func (input Input) stopOnEachAsnFound(threadsNumber int, asnPath string) {
 		}
 	}()
 	//
-	ipsFound, err := input.GetIPsFromPriorities(true, threadsNumber, checkProgressEach, chanProgress, chanIPsFound, asnPath)
+	ipsFound, err := input.GetIPsFromPriorities(stopOnASNFound, threadsNumber, tcpTimeout, checkProgressEach, chanProgress, chanIPsFound, asnPath)
 	if err != nil {
 		log.Fatalf("failed running the code: %s", err)
 	}
@@ -70,7 +69,7 @@ func (input Input) stopOnEachAsnFound(threadsNumber int, asnPath string) {
 	f, _ := os.Create("./results/result.json")
 	json.NewEncoder(f).Encode(finalResult)
 	//if you want to verify the ssl
-	finalResult.SetSSL(input.URL.Host)
+	finalResult.SetSSL(input.URL.Host, sslTimeout)
 	//---------------------
 	f2, _ := os.Create("./results/result_ssl_verification.json")
 	json.NewEncoder(f2).Encode(finalResult)

@@ -7,21 +7,21 @@ import (
 	"time"
 )
 
-func VerifyAll(ip, host string) ([]string, bool, error) {
+func VerifyAll(ip, host string, sslTimeout time.Duration) ([]string, bool, error) {
 	var found bool
-	if err := VerifyHost(ip, host); err == nil {
+	if err := VerifyHost(ip, host, sslTimeout); err == nil {
 		found = true
 	}
-	commonNames, err := GetCommonNames(ip)
+	commonNames, err := GetCommonNames(ip, sslTimeout)
 	if err != nil {
 		return nil, false, trace.NewOrAdd(1, "ssl", "VerifyAll", err, "")
 	}
 	return commonNames, found, nil
 }
-func GetCommonNames(ip string) ([]string, error) {
+func GetCommonNames(ip string, sslTimeout time.Duration) ([]string, error) {
 	ipPort := ip + ":443"
 	dialer := &net.Dialer{
-		Timeout: 10 * time.Second,
+		Timeout: sslTimeout,
 	}
 	conn, err := tls.DialWithDialer(dialer, "tcp", ipPort, &tls.Config{
 		InsecureSkipVerify: true,
@@ -40,10 +40,10 @@ func GetCommonNames(ip string) ([]string, error) {
 }
 
 // yes separated functions, sometimes it's not enough with the IP and need to send the host to tls conection
-func VerifyHost(ip, host string) error {
+func VerifyHost(ip, host string, sslTimeout time.Duration) error {
 	ipPort := ip + ":443"
 	dialer := &net.Dialer{
-		Timeout: 3 * time.Second,
+		Timeout: sslTimeout,
 	}
 	conn, err := tls.DialWithDialer(dialer, "tcp", ipPort, &tls.Config{
 		ServerName: host,

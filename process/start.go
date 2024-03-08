@@ -6,8 +6,8 @@ import (
 	"time"
 )
 
-func Start(websiteURL *url.URL, requestBody []byte, keywords [][]byte, ip string, timeout time.Duration) (bool, int, []byte, error) {
-	redirectFound, keywordsFound, buffer, err := checkWithHTTP(websiteURL.Host, requestBody, keywords, ip, timeout)
+func Start(websiteURL *url.URL, requestBody []byte, keywords [][]byte, ip string, tcpTimeout time.Duration) (bool, int, []byte, error) {
+	redirectFound, keywordsFound, buffer, err := checkWithHTTP(websiteURL.Host, requestBody, keywords, ip, tcpTimeout)
 	if err != nil {
 		return false, 1, nil, trace.NewOrAdd(1, "process", "Start", err, "")
 	}

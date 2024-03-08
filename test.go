@@ -4,19 +4,24 @@ import (
 	"encoding/json"
 	"log"
 	"os"
+	"time"
 )
 
 func Test() {
 	input := Kroger
-	threadsNumber := 500
-	asnPath := "./asn.csv"
-	input.stopOnEachAsnFound(threadsNumber, asnPath)
+	threadsNumber := 80
+	tcpTimeout := time.Second
+	sslTimeout := time.Second * 5
+	asnPath := "../asn.csv"
+	stopOnASNFound := true
+	input.SearchByKeywords(stopOnASNFound, threadsNumber, tcpTimeout, sslTimeout, asnPath)
 }
 func test01() {
 	input := Mouser
 	ip := "12.5.163.52"
 	input.setInputs()
-	found, number, buffer, err := input.Marco(ip)
+	tcpTimeout := time.Second
+	found, number, buffer, err := input.Marco(ip, tcpTimeout)
 	os.WriteFile("./rawdata2.html", buffer, 0644)
 	if err != nil {
 		log.Println("err: ", err)
@@ -63,7 +68,7 @@ func processSSLName(fileName string) {
 		}
 		final2.AsnsFound = append(final2.AsnsFound, asnFound)
 	}
-	final2.SetSSL(final2.Domain)
+	final2.SetSSL(final2.Domain, time.Second*3)
 	f2, _ := os.Create(fileName)
 	json.NewEncoder(f2).Encode(final2)
 }

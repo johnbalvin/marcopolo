@@ -1,7 +1,10 @@
 package main
 
-import "marcopolo/process"
+import (
+	"marcopolo/process"
+	"time"
+)
 
-func (in *Input) Marco(ip string) (bool, int, []byte, error) {
-	return process.Start(in.URL, in.request, in.keyworkds, ip, in.TCPTimeout)
+func (in *Input) Marco(ip string, tcpTimeout time.Duration) (bool, int, []byte, error) {
+	return process.Start(in.URL, in.request, in.keyworkds, ip, tcpTimeout)
 }

@@ -13,9 +13,9 @@ import (
 )
 
 // I'm not using the http package because for some IP the code will hang forever even thouth I had place a timeout on the client and on the dialer
-func checkWithHTTP(host string, requestBody []byte, keywords [][]byte, ip string, timeout time.Duration) (bool, bool, []byte, error) {
+func checkWithHTTP(host string, requestBody []byte, keywords [][]byte, ip string, tcpTimeout time.Duration) (bool, bool, []byte, error) {
 	ipPort := fmt.Sprintf("%s:80", ip)
-	conn, err := net.DialTimeout("tcp", ipPort, timeout)
+	conn, err := net.DialTimeout("tcp", ipPort, tcpTimeout)
 	if err != nil {
 		return false, false, nil, trace.NewOrAdd(1, "process", "checkWithHTTP", err, "")
 	}

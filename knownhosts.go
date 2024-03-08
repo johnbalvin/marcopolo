@@ -4,13 +4,11 @@ import (
 	"fmt"
 	"marcopolo/asn"
 	"marcopolo/utils"
-	"time"
 )
 
 var SecureState = Input{
 	URL:        utils.ParseURL("https://secure.state.co.nz/car"),
 	Keyworkds:  []string{"State Insurance", "secure.state.co.nz/car/favicon.ico"},
-	TCPTimeout: time.Second,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"IAG New Zealand"},
@@ -19,7 +17,6 @@ var SecureState = Input{
 }
 var Mouser = Input{
 	URL:        utils.ParseURL("https://www.mouser.de"),
-	TCPTimeout: time.Millisecond * 250,
 	Keyworkds:  []string{"Distributor", "Deutschland"},
 	BufferSize: 2048,
 	Asn: asn.Asn{
@@ -30,7 +27,6 @@ var Mouser = Input{
 var VerifySos = Input{
 	URL:        utils.ParseURL("https://verify.sos.ga.gov/verification/Search.aspx"),
 	Keyworkds:  []string{"Verification", "elicense2000"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Quality Technology Services" /*, "Comcast Cable"*/},
@@ -41,7 +37,6 @@ var VerifySos = Input{
 var Maybank2u = Input{
 	URL:        utils.ParseURL("https://www.maybank2u.com.my/home/m2u/common/login.do"),
 	Keyworkds:  []string{"Maybank2u", "Malaysia"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Binariang Berh", "Philippine Long Distan", "NTT America", "CenturyLink", "Net Onboard Sdn", "Arcnet", "TM TECHNOLOGY", "Reliance Jio Infoco"},
@@ -51,7 +46,6 @@ var Maybank2u = Input{
 var DeutscheBank = Input{
 	URL:        utils.ParseURL("https://www.db.com/index?language_id=1&kid=sl.redirect-en.shortcut"),
 	Keyworkds:  []string{"Deutsche Bank", "dwebcms"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Deutsche Bank", "google"},
@@ -61,7 +55,6 @@ var DeutscheBank = Input{
 var Rhbgroup = Input{
 	URL:        utils.ParseURL("https://onlinebanking.rhbgroup.com/my/login"),
 	Keyworkds:  []string{"Online banking"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"OSK Securities", "TM TECHNOLOGY SERVICES", "MaxisNet International Int", "TTNET-MY", "Amazon", "Binariang Berhad", "Digital Singapore", "AIMS Data Centre", "PT Cyberindo", "Forcepoint Cloud", "Telekomunikasi", "SingNet", "Gilead Sciences", "Cyberindo", "HGC Global"},
@@ -71,7 +64,6 @@ var Rhbgroup = Input{
 var Kroger = Input{
 	URL:        utils.ParseURL("https://www.kroger.com"),
 	Keyworkds:  []string{"Kroger", "Groceries"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"The Kroger", "google" /*"Sprint"*/},
@@ -81,7 +73,6 @@ var Kroger = Input{
 var Nike = Input{
 	URL:        utils.ParseURL("https://www.nike.com"),
 	Keyworkds:  []string{"Nike delivers", "athletes"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Verizon", "amazon", "Fastly"},
@@ -92,7 +83,6 @@ var Nike = Input{
 var Disney = Input{
 	URL:        utils.ParseURL("https://disneyworld.disney.go.com"),
 	Keyworkds:  []string{"50th_anniversary_countdown_clock"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Rackspace Hosting", "Disney Worldwide", "Google"},
@@ -102,7 +92,6 @@ var Disney = Input{
 var Walmart = Input{
 	URL:        utils.ParseURL("https://www.walmart.com"),
 	Keyworkds:  []string{"walmartimages", "Save Money", "free delivery"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 7048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Cox Communications", "Rackspace", "Wal-Mart", "CyrusOne", "google", "amazon", "NTT America", "AT&T Services", "Steadfast"},
@@ -112,7 +101,6 @@ var Walmart = Input{
 var Adidas = Input{
 	URL:        utils.ParseURL("https://www.adidas.com/us"),
 	Keyworkds:  []string{"adidas", "Official", "running"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Globe Telecoms", "noris network", "CenturyLink Communications", "amazon"},
@@ -123,7 +111,6 @@ var Adidas = Input{
 var Adobe = Input{
 	URL:        utils.ParseURL("https://www.adobe.com"),
 	Keyworkds:  []string{"Adobe", "marketing and document"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Globe Telecom", "StarHub", "Adobe", "Fastly", "Amazon"},
@@ -133,7 +120,6 @@ var Adobe = Input{
 var Selesforce = Input{
 	URL:        utils.ParseURL("https://www.salesforce.com"),
 	Keyworkds:  []string{"Salesforce", "Customer"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Salesforce"},
@@ -143,7 +129,6 @@ var Selesforce = Input{
 var Microsoft = Input{
 	URL:        utils.ParseURL("https://www.microsoft.com"),
 	Keyworkds:  []string{"Microsoft", "Cloud", "Computers"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"GTT Communications", "Microsoft", "Edgecast"},
@@ -153,7 +138,6 @@ var Microsoft = Input{
 var BestBuy = Input{
 	URL:        utils.ParseURL("https://www.bestbuy.com"),
 	Keyworkds:  []string{"Best Buy", "Shop Now"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Rogers Communicatio", "Rackspace", "Amazon", "Best Buy", "GTT Communications"},
@@ -164,7 +148,6 @@ var BestBuy = Input{
 var InstantCart = Input{
 	URL:        utils.ParseURL("https://www.instacart.com"),
 	Keyworkds:  []string{"delivery", "pickup", "grocers"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Amazon", "google"},
@@ -174,7 +157,6 @@ var InstantCart = Input{
 var Iberia = Input{
 	URL:        utils.ParseURL("https://www.iberia.com/us/"),
 	Keyworkds:  []string{"IBERIA.COM", "best prices"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"IBERIA LINEAS AEREAS", "Amazon"},
@@ -184,7 +166,6 @@ var Iberia = Input{
 var Cars = Input{
 	URL:        utils.ParseURL("https://www.cars.com"),
 	Keyworkds:  []string{"New Cars", "Dealers"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Classified Venture", "Amazon"},
@@ -194,7 +175,6 @@ var Cars = Input{
 var starngage = Input{
 	URL:        utils.ParseURL("https://starngage.com/plus/en-us"),
 	Keyworkds:  []string{"Influencer", "Agencies"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Amazon", "GoDaddy"},
@@ -204,7 +184,6 @@ var starngage = Input{
 var Fansale = Input{
 	URL:        utils.ParseURL("https://www.fansale.de/fansale/"),
 	Keyworkds:  []string{"fanSALE", "Tickets"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Mobile Telecommunication Company Saudi Arabia", "CTS Eventim"},
@@ -214,7 +193,6 @@ var Fansale = Input{
 var smiles = Input{
 	URL:        utils.ParseURL("https://www.smiles.com.br"),
 	Keyworkds:  []string{"Milhas para quem"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Cox", "amazon", "Cisco", "Microsoft"},
@@ -224,7 +202,6 @@ var smiles = Input{
 var RealtorCa = Input{
 	URL:        utils.ParseURL("https://www.realtor.ca"),
 	Keyworkds:  []string{"Real Estate", "realtor"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"Microsoft", "DigitalOcean", "Rogers Communications"},
@@ -234,7 +211,6 @@ var RealtorCa = Input{
 var Crunchbase = Input{
 	URL:        utils.ParseURL("https://www.crunchbase.com"),
 	Keyworkds:  []string{"Crunchbase: Discover innovative"},
-	TCPTimeout: time.Millisecond * 250,
 	BufferSize: 2048,
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"amazon", "Google"},
@@ -244,9 +220,8 @@ var Crunchbase = Input{
 
 // Hetzner be aware of Hetzner
 var platesmania = Input{
-	URL:        utils.ParseURL("https://platesmania.com"),
-	Keyworkds:  []string{"Photos of vehicles"},
-	TCPTimeout: time.Millisecond * 250,
+	URL:       utils.ParseURL("https://platesmania.com"),
+	Keyworkds: []string{"Photos of vehicles"},
 	Asn: asn.Asn{
 		PrioritiesNames: []string{"GoDaddy", "Hetzner", "OVH"},
 		ForbiddenNames:  ForbidenASN,
