@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func (input Input) SearchBySSLCertificatesOnly(stopOnSSlFound bool, threadsNumber int, sslTimeout time.Duration, asnPath string) { //if you want to stop once you find the IP having the ssl certificate
+func (input Input) SearchBySSLCertificatesOnly(stopOnSSlFound bool, threadsNumber int, sslTimeout time.Duration, asnPath, outputFolder string) { //if you want to stop once you find the IP having the ssl certificate
 	for _, priority := range input.Asn.PrioritiesNames {
 		fmt.Printf("Priority name: *%s*\n", priority)
 	}
@@ -24,7 +24,7 @@ func (input Input) SearchBySSLCertificatesOnly(stopOnSSlFound bool, threadsNumbe
 		}
 	}()
 	//---
-	file, err := os.OpenFile("./results/ips.csv", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	file, err := os.OpenFile(fmt.Sprintf("%s/ips.csv", outputFolder), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Fatalf("failed opening file: %s", err)
 	}
@@ -59,11 +59,11 @@ func (input Input) SearchBySSLCertificatesOnly(stopOnSSlFound bool, threadsNumbe
 		}
 	}
 	//
-	f, _ := os.Create("./results/result_ip_ssl_verification_ips.json")
+	f, _ := os.Create(fmt.Sprintf("%s/result_ip_ssl_verification_ips.json", outputFolder))
 	json.NewEncoder(f).Encode(finalResult)
 	//if you want to verify the ssl
 	finalResult.SetSSL(input.URL.Host, sslTimeout)
 	//---------------------
-	f2, _ := os.Create("./results/result_ip_ssl_verification_all_data.json")
+	f2, _ := os.Create(fmt.Sprintf("%s/result_ip_ssl_verification_all_data.json", outputFolder))
 	json.NewEncoder(f2).Encode(finalResult)
 }

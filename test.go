@@ -13,8 +13,9 @@ func Test() {
 	tcpTimeout := time.Second
 	sslTimeout := time.Second * 5
 	asnPath := "../asn.csv"
+	outputFolder := "./results"
 	stopOnASNFound := true
-	input.SearchByKeywords(stopOnASNFound, threadsNumber, tcpTimeout, sslTimeout, asnPath)
+	input.SearchByKeywords(stopOnASNFound, threadsNumber, tcpTimeout, sslTimeout, asnPath, outputFolder)
 }
 func test01() {
 	input := Mouser

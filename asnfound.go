@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-func (input Input) SearchByKeywords(stopOnASNFound bool, threadsNumber int, tcpTimeout, sslTimeout time.Duration, asnPath string) {
+func (input Input) SearchByKeywords(stopOnASNFound bool, threadsNumber int, tcpTimeout, sslTimeout time.Duration, asnPath, outputFolder string) {
 	for _, priority := range input.Asn.PrioritiesNames {
 		fmt.Printf("Priority name: *%s*\n", priority)
 	}
@@ -26,10 +26,10 @@ func (input Input) SearchByKeywords(stopOnASNFound bool, threadsNumber int, tcpT
 	}()
 	//---
 	//saving results as soon as it finds one
-	if err := os.MkdirAll("./results/body", 0700); err != nil {
+	if err := os.MkdirAll(fmt.Sprintf("%s/body", outputFolder), 0700); err != nil {
 		log.Fatalf("failed creating a folder, please check the permissions of code: %s", err)
 	}
-	file, err := os.OpenFile("./results/ips.csv", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	file, err := os.OpenFile(fmt.Sprintf("%s/ips.csv", outputFolder), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Fatalf("failed opening file: %s", err)
 	}
@@ -38,7 +38,7 @@ func (input Input) SearchByKeywords(stopOnASNFound bool, threadsNumber int, tcpT
 		for ipMeta := range chanIPsFound {
 			file.WriteString(strconv.Itoa(ipMeta.AsnIndex) + "," + ipMeta.AsnID + "," + ipMeta.AsnName + "," + ipMeta.IP.IP + "\n")
 			fileName := strings.ReplaceAll(ipMeta.IP.IP, ".", "_")
-			os.WriteFile(fmt.Sprintf("./results/body/%s.html", fileName), ipMeta.Body, 0644)
+			os.WriteFile(fmt.Sprintf("%s/body/%s.html", outputFolder, fileName), ipMeta.Body, 0644)
 		}
 	}()
 	//
@@ -66,12 +66,12 @@ func (input Input) SearchByKeywords(stopOnASNFound bool, threadsNumber int, tcpT
 		}
 	}
 	//
-	f, _ := os.Create("./results/result.json")
+	f, _ := os.Create(fmt.Sprintf("%s/result.json", outputFolder))
 	json.NewEncoder(f).Encode(finalResult)
 	//if you want to verify the ssl
 	finalResult.SetSSL(input.URL.Host, sslTimeout)
 	//---------------------
-	f2, _ := os.Create("./results/result_ssl_verification.json")
+	f2, _ := os.Create(fmt.Sprintf("%s/result_ssl_verification.json", outputFolder))
 	json.NewEncoder(f2).Encode(finalResult)
 }
 
