@@ -42,7 +42,7 @@ Use it as it is, then wait for completition
 ```go
    func main() {
       input := Input{ //this is the default host, fill the variables as you need it
-         URL:        utils.ParseURL("https://secure.state.co.nz/car"),                  //url to test on on
+         URL:        utils.ParseURL("https://secure.state.co.nz/car"),                  //and url to test on on
          Keyworkds:  []string{"State Insurance", "secure.state.co.nz/car/favicon.ico"}, //keywords presented on the body, use keywords presented on the first bytes of the body
          BufferSize: 2048,
          Asn: asn.Asn{
@@ -64,27 +64,28 @@ Use it as it is, then wait for completition
    }
 
 ```
-## If you just want to check the SSL from the IP, some IP won't response back on a GET request but for some reason they response with a valid SSL certificate
+
+## If you just want to check the SSL from the IP
+
+ Some IP won't response back on a GET request but for some reason they response with a valid SSL certificate
+
 ```go
    // USE CABLE AND NOT WIFI, DIRECT CABLE WILL BE BETTER FOR THIS PROJECT
    func main() {
       input := Input{ //this is the default host, fill the variables as you need it
-         URL:        utils.ParseURL("https://secure.state.co.nz/car"),                  //url to test on on
-         Keyworkds:  []string{"State Insurance", "secure.state.co.nz/car/favicon.ico"}, //keywords presented on the body, use keywords presented on the first bytes of the bofy
-         BufferSize: 2048,
+         URL:        utils.ParseURL("https://secure.state.co.nz/car"),                  //url to test on
          Asn: asn.Asn{
             PrioritiesNames: []string{"IAG New Zealand"}, //ASN name based on your DNS investigation
             ForbiddenNames:  ForbidenASN,
          },
       }
       threadsSSLVerification := 150
-      sslTimeout := time.Second * 5 //it's ok this one to be bigger than the TCP timeout, at the end it will search an small portion of IPs so no need to worry
+      sslTimeout := time.Second * 5 
       asnPath := "./asn.csv"
       outputFolder := "./results"
       stopOnSSlFound := true // it will stop once a valid SSL for that domain is found
       input.SearchBySSLCertificatesOnly(stopOnSSlFound, threadsSSLVerification, sslTimeout, asnPath, outputFolder)
    }
-
 ```
 You need:
 
