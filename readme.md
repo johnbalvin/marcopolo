@@ -58,9 +58,6 @@ Use it as it is, then wait for completition
       outputFolder := "./results"
       stopOnASNFound := true // it will stop once an IP is found on an ASN number, still will search on others ASN
       input.SearchByKeywords(stopOnASNFound, threadsKeywords, threadsSSLVerification, tcpTimeout, sslTimeout, asnPath, outputFolder)
-      //Uncoment in case you need an IP with valid SSL certificate
-      //stopOnSSlFound := true // it will stop once a valid SSL for that domain is found
-      //input.SearchBySSLCertificatesOnly(stopOnSSlFound, threadsNumber, sslTimeout, asnPath, outputFolder)
    }
 
 ```
