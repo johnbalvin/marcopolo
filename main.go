@@ -10,7 +10,7 @@ import (
 // threadsNumber and tcpTimeout are values that depend on your enviroment, so make you sure make the right setup
 // USE CABLE AND NOT WIFI, DIRECT CABLE WILL BE BETTER FOR THIS PROJECT
 func main() {
-	input := SecureState
+	input := SecureState //this is the default host, fill the variables as you need it
 	threadsNumber := 80
 	tcpTimeout := time.Second
 	sslTimeout := time.Second * 5 //it's ok this one to be bigger than the TCP timeout, at the end it will search an small portion of IPs so no need to worry
