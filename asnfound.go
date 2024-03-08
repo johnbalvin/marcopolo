@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-func (input Input) SearchByKeywords(stopOnASNFound bool, threadsNumber int, tcpTimeout, sslTimeout time.Duration, asnPath, outputFolder string) {
+func (input Input) SearchByKeywords(stopOnASNFound bool, threadsKeywords, theadsSSLVerification int, tcpTimeout, sslTimeout time.Duration, asnPath, outputFolder string) {
 	for _, priority := range input.Asn.PrioritiesNames {
 		fmt.Printf("Priority name: *%s*\n", priority)
 	}
@@ -18,7 +18,7 @@ func (input Input) SearchByKeywords(stopOnASNFound bool, threadsNumber int, tcpT
 	chanProgress := make(chan Progress)
 	chanIPsFound := make(chan IPFoundMeta)
 	//printing progress
-	log.Println("threads number size: ", threadsNumber, input.URL.Host)
+	log.Println("threads number size: ", threadsKeywords, input.URL.Host)
 	go func() {
 		for progressData := range chanProgress {
 			log.Printf("Progress 3: %.2f %% %.0f/%d amount step 1-2: *%.2f %% - %.2f%%*  ips found: %d\n", (progressData.Progress/float64(progressData.TotalIPs))*100, progressData.Progress, progressData.TotalIPs, (float64(progressData.CountFirst)/float64(progressData.Progress))*100, (float64(progressData.CountSecond)/progressData.Progress)*100, progressData.IpsFoundCount)
@@ -42,7 +42,7 @@ func (input Input) SearchByKeywords(stopOnASNFound bool, threadsNumber int, tcpT
 		}
 	}()
 	//
-	ipsFound, err := input.GetIPsFromPriorities(stopOnASNFound, threadsNumber, tcpTimeout, checkProgressEach, chanProgress, chanIPsFound, asnPath)
+	ipsFound, err := input.GetIPsFromPriorities(stopOnASNFound, threadsKeywords, tcpTimeout, checkProgressEach, chanProgress, chanIPsFound, asnPath)
 	if err != nil {
 		log.Fatalf("failed running the code: %s", err)
 	}
@@ -69,7 +69,7 @@ func (input Input) SearchByKeywords(stopOnASNFound bool, threadsNumber int, tcpT
 	f, _ := os.Create(fmt.Sprintf("%s/result.json", outputFolder))
 	json.NewEncoder(f).Encode(finalResult)
 	//if you want to verify the ssl
-	finalResult.SetSSL(input.URL.Host, sslTimeout)
+	finalResult.SetSSL(theadsSSLVerification, input.URL.Host, sslTimeout)
 	//---------------------
 	f2, _ := os.Create(fmt.Sprintf("%s/result_ssl_verification.json", outputFolder))
 	json.NewEncoder(f2).Encode(finalResult)

@@ -7,14 +7,13 @@ import (
 	"time"
 )
 
-func (finalResult *Result) SetSSL(host string, sslTimeout time.Duration) {
+func (finalResult *Result) SetSSL(theads int, host string, sslTimeout time.Duration) {
 	var wg sync.WaitGroup
 	var progress int
 	var size int
 	var mutex sync.Mutex
 	chanIndexes := make(chan [2]int)
-	workerSizeSSL := 50
-	for range workerSizeSSL {
+	for range theads {
 		go func() {
 			for indexes := range chanIndexes {
 				i := indexes[0]
